@@ -1,0 +1,65 @@
+#logo{
+    width: 160px;
+    }
+#perfil{
+    width: 40px;
+}
+body{
+    background-image: url("Imagenes/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: center center; */
+    /* Opcional: ajustar otros estilos para el cuerpo de la página */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+label{
+display: block;
+margin-top: 30px;
+font-size: 20px;
+font-weight: 500;
+}
+input{
+    display: block;
+    height: 40px;
+    width: 100%;
+    background-color: rgb(215, 233, 238);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+
+}
+
+
+#btnlogin{
+    margin-top: 20px;
+    width: 40%;
+    padding: 1px;
+    font-size: 18px;
+    font-weight: 100;
+    border-radius: 9px;
+    border: 2px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(3,36,0,1) 0%, rgba(9,121,16,1) 45%, rgba(48,255,0,1) 100%);
+    color: white;
+
+}
+#cancelar{
+    margin-top: 20px;
+    width: 40%;
+    padding: 1px;
+    font-size: 18px;
+    font-weight: 100;
+    border-radius: 9px;
+    border: 2px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(36,0,0,1) 0%, rgba(121,9,9,1) 45%, rgba(255,0,0,1) 100%);
+    color: white;
+}
