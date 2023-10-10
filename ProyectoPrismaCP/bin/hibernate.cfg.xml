@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/bd_prismacp</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">Gabb1995*</property>
+
+        <!-- JDBC connection pool settings … using built-in test pool -->
+        <property name="hibernate.connection.pool_size">5</property>
+
+        <!-- Select our SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- Echo the SQL to stdout -->
+        <property name="show_sql">true</property>
+
+        <!-- Set the current session context -->
+        <property name="current_session_context_class">thread</property>
+        
+        <mapping class="com.hibernate.prisma.Inventario" />
+        
+    </session-factory>
+</hibernate-configuration>
