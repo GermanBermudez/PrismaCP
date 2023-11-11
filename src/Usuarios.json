@@ -1,0 +1,23 @@
+[
+    {
+        "Id": "1",
+        "Nombre": "German Bermudez",
+        "Contraseña": "German.123",
+        "Usuario": "GermanB",
+        "Cedula": "1014269444"
+    },
+    {
+        "Id": "2",
+        "Nombre": "Yariceth Ortiz",
+        "Contraseña": "Yariceth.123",
+        "Usuario": "YaricethO",
+        "Cedula": "1026159133"
+    },
+    {
+        "Id": "3",
+        "Nombre": "Amanda Sierra",
+        "Contraseña": "Amanda.123",
+        "Usuario": "AmandaS",
+        "Cedula": "1032493496"
+    }
+]
