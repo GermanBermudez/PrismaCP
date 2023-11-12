@@ -6,7 +6,7 @@ const ControlUsuarios = require ('../Usuarios.json');
 const _ = require ('underscore');
 
 //Validación de Login
-router.get('/', (req, res) => {    
+router.get('/login', (req, res) => {    
     const {Usuario, Contraseña} =req.body;
     
     if(Usuario && Contraseña){        
@@ -16,11 +16,11 @@ router.get('/', (req, res) => {
                     res.json(usuario)
                 }
                 else{
-                    res.json('Contraseña errada')
+                    res.json('Contraseña incorrecta')
                 }                
             }                        
         });
-        res.json('Usuario no encontrado')
+        res.json('Usuario no encontrado, por favor registrar como nuevo')
     }
     else{
         res.json (ControlUsuarios);
@@ -29,7 +29,7 @@ router.get('/', (req, res) => {
 });
 
 //Registro de un nuevo usuario
-router.post('/', (req, res) => {
+router.post('/resgistro', (req, res) => {
     console.log (req.body);
     
     const Id = ControlUsuarios.length + 1;
@@ -41,12 +41,12 @@ router.post('/', (req, res) => {
         res.send ('Usuario Registrado');
     }
     else{
-        res.send ('Operación fallida');
+        res.send ('Operación fallida, faltan datos');
     }            
 });
 
 //Elimar un usuario
-router.delete('/:Id', (req, res) => {
+router.delete('/eliminacion/:Id', (req, res) => {
     console.log (req.params);
     const {Id} = req.params;
     res.send ('Usuario Eliminado');
@@ -59,7 +59,7 @@ router.delete('/:Id', (req, res) => {
 });
 
 //Actualizar uno de los registros
-router.put ('/:Id', (req, res) => {
+router.put ('/actualizar/:Id', (req, res) => {
     const {Id} = req.params;
     const {Nombre, Contraseña, Usuario, Cedula} =req.body;
     if (Nombre && Contraseña && Usuario && Cedula){
@@ -71,10 +71,10 @@ router.put ('/:Id', (req, res) => {
                 usuario.Cedula = Cedula;
             }
         });
-        res.json(ControlUsuarios);        
+        res.json('Usuario actualizado!');        
     }
     else {
-        res.status(500).json({error: 'Hay un error, faltan datos'});
+        res.json('Hay un error, faltan datos');
     }
 });
 
