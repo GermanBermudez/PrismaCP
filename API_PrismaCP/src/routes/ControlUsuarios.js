@@ -13,7 +13,7 @@ router.get('/login', (req, res) => {
         _.each(ControlUsuarios, (usuario, i) => {
             if (usuario.Usuario == Usuario) {
                 if(usuario.Contraseña == Contraseña){
-                    res.json(usuario)
+                    res.send('Sesión iniciada. ¡Bienvenido! ' + usuario.Nombre);
                 }
                 else{
                     res.json('Contraseña incorrecta')
@@ -29,7 +29,7 @@ router.get('/login', (req, res) => {
 });
 
 //Registro de un nuevo usuario
-router.post('/resgistro', (req, res) => {
+router.post('/Registro', (req, res) => {
     console.log (req.body);
     
     const Id = ControlUsuarios.length + 1;
@@ -46,7 +46,7 @@ router.post('/resgistro', (req, res) => {
 });
 
 //Elimar un usuario
-router.delete('/eliminacion/:Id', (req, res) => {
+router.delete('/Eliminacion/:Id', (req, res) => {
     console.log (req.params);
     const {Id} = req.params;
     res.send ('Usuario Eliminado');
@@ -59,7 +59,7 @@ router.delete('/eliminacion/:Id', (req, res) => {
 });
 
 //Actualizar uno de los registros
-router.put ('/actualizar/:Id', (req, res) => {
+router.put ('/Actualizacion/:Id', (req, res) => {
     const {Id} = req.params;
     const {Nombre, Contraseña, Usuario, Cedula} =req.body;
     if (Nombre && Contraseña && Usuario && Cedula){
